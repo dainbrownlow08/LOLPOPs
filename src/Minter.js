@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from "react";
 import { connectWallet, getCurrentWalletConnected } from "./utils/interact.js";
 import styled from "styled-components";
@@ -54,7 +55,7 @@ const Minter = (props) => {
 
   useEffect(() => {
     getStatus();
-  });
+  }, []);
 
   const connectWalletPressed = async () => {
     const walletResponse = await connectWallet();
