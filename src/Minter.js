@@ -283,7 +283,7 @@ const Minter = (props) => {
           <h3>CryptoPaco: Founder and 3D Technical Developer</h3>
           <h3>Pancake: Founder and Visual Artist</h3>
           <h3>Yz: Project Manager</h3>
-          <h3>Tech: Developer</h3>
+          <h3>Tech: Web/Solidity Engineer</h3>
         </Grid>
         <Grid item xs={6} md={1} />
         <Grid item xs={6} md={5}>
