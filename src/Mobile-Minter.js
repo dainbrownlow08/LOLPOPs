@@ -196,7 +196,7 @@ const MobileMinter = (props) => {
       <h2 className="SectionTitle">FAQ</h2>
       <h2>HOW CAN WE MINT?</h2>
       <h3>
-        On Minting-Day, head to our to confirm your mint window! We are
+        On Minting-Day, head to our website to confirm your mint window! We are
         finalizing systems to ensure we avoid "Gas Wars" by allowing users
         extended periods of time to mint after their wallet address is verified
         - we are looking into potential solutions, and will be sure to update

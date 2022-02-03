@@ -18,7 +18,7 @@ a:visited {
   color: #bb86fc;
 }
 a:hover {
-  color: #f5ebff;
+  color: #bb86fc;
 }
 
 code {
@@ -29,7 +29,14 @@ code {
 .Minter {
   max-width: 100vh;
   max-height: 80vh;
-  padding: 60px 100px;
+  padding: 0px 100px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.SiteContainer {
+  max-width: 100vh;
+  padding: 10px;
   margin: 0 auto;
   text-align: left;
 }
@@ -96,10 +103,6 @@ code {
   font-size: 30px;
 }
 
-.nav-item {
-  margin-right: 12px;
-}
-
 .Socialbar {
   display: flex;
   flex-wrap: wrap;
@@ -139,9 +142,8 @@ input:focus {
 
 #title {
   font-family: "Luckiest Guy", cursive;
-  font-size: 78px;
-  margin-top: 50px;
-  margin-bottom: 10px;
+  font-size: 65px;
+  /* margin-bottom: 40px; */
 }
 
 .MobileTitle {
@@ -155,7 +157,7 @@ input:focus {
 
 .WalletButton {
   display: flex;
-  justify-content: right;
+  justify-content: flex-end;
 }
 
 .uploadFile {
