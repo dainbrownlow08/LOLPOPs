@@ -123,7 +123,7 @@ const Minter = (props) => {
       {/* <h1 id="title">LOLPOPs NFT</h1> */}
       {/* <p id="status">{status}</p> */}
       <h2>
-        LOLPOPs is a collection of 10,000 randomly-generated photorealistic NFTs
+        LOLPOPs is a collection of 8,888 randomly-generated photorealistic NFTs
         living on the Ethereum Blockchain.
       </h2>
       <ImageContainer>

@@ -147,7 +147,7 @@ const MobileMinter = (props) => {
       <br />
       {/* <p id="status">{status}</p> */}
       <h3>
-        LOLPOPs is a collection of 10,000 randomly-generated photorealistic NFTs
+        LOLPOPs is a collection of 8,888 randomly-generated photorealistic NFTs
         living on the Ethereum Blockchain.
       </h3>
       <ImageContainer>
