@@ -6,7 +6,6 @@ import Button from "@mui/material/Button";
 import Grid from "@mui/material/Grid";
 import SvgIcon from "@mui/material/SvgIcon";
 import { IconButton } from "@mui/material";
-import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 
 const Minter = (props) => {
