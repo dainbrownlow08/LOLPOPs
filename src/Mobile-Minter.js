@@ -1,13 +1,8 @@
 /* eslint-disable react-hooks/exhaustive-deps */
-import { useEffect, useState } from "react";
-import { connectWallet, getCurrentWalletConnected } from "./utils/interact.js";
 import styled from "styled-components";
-import Button from "@mui/material/Button";
 import Grid from "@mui/material/Grid";
 import SvgIcon from "@mui/material/SvgIcon";
 import { IconButton } from "@mui/material";
-
-import Toolbar from "@mui/material/Toolbar";
 
 const MobileMinter = (props) => {
   //State variables
