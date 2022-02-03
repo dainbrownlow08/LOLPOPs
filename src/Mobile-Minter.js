@@ -230,16 +230,16 @@ const MobileMinter = (props) => {
       </h3>
       <br />
       <h3>CryptoPaco</h3>
-      <h4>Founder and 3D Technical Developer</h4>
+      <h3>Founder and 3D Technical Developer</h3>
       <br />
       <h3>Pancake</h3>
-      <h4>Founder and Visual Artist</h4>
+      <h3>Founder and Visual Artist</h3>
       <br />
       <h3>Yz</h3>
-      <h4>Project Manager</h4>
+      <h3>Project Manager</h3>
       <br />
       <h3>Technologist</h3>
-      <h4>Web/Solidity Engineer</h4>
+      <h3>Web/Solidity Engineer</h3>
       <br />
       <Grid container spacing={1}>
         <Grid item xs={12} md={12}>
