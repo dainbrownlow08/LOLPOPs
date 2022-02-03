@@ -27,6 +27,14 @@ code {
   text-align: left;
 }
 
+.MobileMinter {
+  /* max-width: 100vh; */
+  max-height: 80vh;
+  padding: 60px 100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
 .Roadmap {
   display: flex;
 }
@@ -103,6 +111,11 @@ button {
   font-family: "Luckiest Guy", cursive;
   font-size: 45px;
   margin-top: 50px;
+}
+
+.MobileTitle {
+  font-family: "Luckiest Guy", cursive;
+  font-size: 50px;
 }
 
 #status {

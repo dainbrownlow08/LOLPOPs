@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
 import Minter from "./Minter";
+import MobileMinter from "./Mobile-Minter";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 
 const theme = createTheme({
@@ -17,7 +18,6 @@ const theme = createTheme({
 export default class App extends Component {
   render() {
     let width = window.innerWidth;
-    console.log(width);
     if (width > 695) {
       return (
         <ThemeProvider theme={theme}>
@@ -25,7 +25,11 @@ export default class App extends Component {
         </ThemeProvider>
       );
     } else {
-      return <div>HELLO</div>;
+      return (
+        <ThemeProvider theme={theme}>
+          <MobileMinter></MobileMinter>
+        </ThemeProvider>
+      );
     }
   }
 }

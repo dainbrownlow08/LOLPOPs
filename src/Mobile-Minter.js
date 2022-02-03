@@ -9,61 +9,61 @@ import { IconButton } from "@mui/material";
 
 import Toolbar from "@mui/material/Toolbar";
 
-const Minter = (props) => {
+const MobileMinter = (props) => {
   //State variables
-  const [walletAddress, setWallet] = useState("");
-  const [status, setStatus] = useState("");
+  // const [walletAddress, setWallet] = useState("");
+  // const [status, setStatus] = useState("");
   // const [name, setName] = useState("");
   // const [description, setDescription] = useState("");
   // const [url, setURL] = useState("");
 
-  function addWalletListener() {
-    if (window.ethereum) {
-      window.ethereum.on("accountsChanged", (accounts) => {
-        if (accounts.length > 0) {
-          setWallet(accounts[0]);
-          setStatus("👆🏽 Write a message in the text-field above.");
-        } else {
-          setWallet("");
-          setStatus("🦊 Connect to Metamask using the top right button.");
-        }
-      });
-    } else {
-      console.log(status);
-      setStatus(
-        <p>
-          {" "}
-          🦊{" "}
-          <a
-            target="_blank"
-            rel="noreferrer"
-            href={`https://metamask.io/download.html`}
-          >
-            You must install Metamask, a virtual Ethereum wallet, in your
-            browser.
-          </a>
-        </p>
-      );
-    }
-  }
+  // function addWalletListener() {
+  //   if (window.ethereum) {
+  //     window.ethereum.on("accountsChanged", (accounts) => {
+  //       if (accounts.length > 0) {
+  //         setWallet(accounts[0]);
+  //         setStatus("👆🏽 Write a message in the text-field above.");
+  //       } else {
+  //         setWallet("");
+  //         setStatus("🦊 Connect to Metamask using the top right button.");
+  //       }
+  //     });
+  //   } else {
+  //     console.log(status);
+  //     setStatus(
+  //       <p>
+  //         {" "}
+  //         🦊{" "}
+  //         <a
+  //           target="_blank"
+  //           rel="noreferrer"
+  //           href={`https://metamask.io/download.html`}
+  //         >
+  //           You must install Metamask, a virtual Ethereum wallet, in your
+  //           browser.
+  //         </a>
+  //       </p>
+  //     );
+  //   }
+  // }
 
-  async function getStatus() {
-    const { address, status } = await getCurrentWalletConnected();
-    setWallet(address);
-    setStatus(status);
+  // async function getStatus() {
+  //   const { address, status } = await getCurrentWalletConnected();
+  //   setWallet(address);
+  //   setStatus(status);
 
-    addWalletListener();
-  }
+  //   addWalletListener();
+  // }
 
-  useEffect(() => {
-    getStatus();
-  }, []);
+  // useEffect(() => {
+  //   getStatus();
+  // }, []);
 
-  const connectWalletPressed = async () => {
-    const walletResponse = await connectWallet();
-    setStatus(walletResponse.status);
-    setWallet(walletResponse.address);
-  };
+  // const connectWalletPressed = async () => {
+  //   const walletResponse = await connectWallet();
+  //   setStatus(walletResponse.status);
+  //   setWallet(walletResponse.address);
+  // };
 
   // const disconnectWalletPressed = async () => {
   //   setWallet("");
@@ -74,8 +74,8 @@ const Minter = (props) => {
   // };
 
   return (
-    <div className="Minter">
-      <Toolbar>
+    <div className="MobileMinter">
+      {/* <Toolbar>
         <div className="Navbar">
           <a href="#FAQ">
             <Button>FAQ</Button>
@@ -108,16 +108,14 @@ const Minter = (props) => {
           )}
         </Button>
       </Toolbar>
-      <br />
-      <h1 id="title">LOLPOPs NFT</h1>
+      <br /> */}
+      <h1 className="MobileTitle">LOLPOPs NFT</h1>
       {/* <p id="status">{status}</p> */}
       <h2>
         LOLPOPs is a collection of 10,000 randomly-generated photorealistic NFTs
         living on the Ethereum Blockchain.
       </h2>
       <ImageContainer>
-        <MinterImage src="lolpop1.png" alt="nft"></MinterImage>
-        <MinterImage src="lolpop2.png" alt="nft"></MinterImage>
         <MinterImage src="lolpop3.png" alt="nft"></MinterImage>
       </ImageContainer>
       {/* <form>
@@ -142,6 +140,7 @@ const Minter = (props) => {
       {/* <button id="mintButton" onClick={onMintPressed}>
         Mint NFT
       </button> */}
+      <br />
       <h3>
         We set out to make an NFT collection created with an innovative process,
         and share our artistic ability and experience in design. In our search
@@ -180,104 +179,69 @@ const Minter = (props) => {
       <h2 className="SectionTitle">ROADMAP ACTIVATIONS</h2>
       <h3>
         We have lots of information, donations, and prizes to reveal as we
-        proceed through our sale targets.
+        proceed through our sale targets. For more detialed information on our
+        roadmap and giveaways, visit our discord!
       </h3>
-      <Grid container spacing={1}>
-        <Grid item xs={6} md={1}>
-          <h3 className="SaleTarget">0%</h3>
-        </Grid>
-        <Grid item xs={6} md={11}>
-          <h3>LOLPOPs Released for Mint!</h3>
-        </Grid>
-      </Grid>
-      <Grid container spacing={1}>
-        <Grid item xs={6} md={1}>
-          <h3 className="SaleTarget">10%</h3>
-        </Grid>
-        <Grid item xs={6} md={11}>
-          <h3>Buy food that is not Top Ramen</h3>
-        </Grid>
-      </Grid>
-      <Grid container spacing={1}>
-        <Grid item xs={6} md={1}>
-          <h3 className="SaleTarget">25%</h3>
-        </Grid>
-        <Grid item xs={6} md={11}>
-          <h3>POPSQUAD goes looking for New Driver-Teams (Collabs)</h3>
-        </Grid>
-      </Grid>
-      <Grid container spacing={1}>
-        <Grid item xs={6} md={1}>
-          <h3 className="SaleTarget">40%</h3>
-        </Grid>
-        <Grid item xs={6} md={11}>
-          <h3>Layer 2 for PopKarts Revealed</h3>
-        </Grid>
-      </Grid>
-      <Grid container spacing={1}>
-        <Grid item xs={6} md={1}>
-          <h3 className="SaleTarget">50%</h3>
-        </Grid>
-        <Grid item xs={6} md={11}>
-          <h3>Post-Mintout Charity Revealed</h3>
-        </Grid>
-      </Grid>
-      <Grid container spacing={1}>
-        <Grid item xs={6} md={1}>
-          <h3 className="SaleTarget">65%</h3>
-        </Grid>
-        <Grid item xs={6} md={11}>
-          <h3>Merch-Shop Developed and Special Merch Giveaways</h3>
-        </Grid>
-      </Grid>
-      <Grid container spacing={1}>
-        <Grid item xs={6} md={1}>
-          <h3 className="SaleTarget">80%</h3>
-        </Grid>
-        <Grid item xs={6} md={11}>
-          <h3>ETH Giveways</h3>
-        </Grid>
-      </Grid>
-      <Grid container spacing={1}>
-        <Grid item xs={6} md={1}>
-          <h3 className="SaleTarget">90%</h3>
-        </Grid>
-        <Grid item xs={6} md={11}>
-          <h3>Airdrop Reveal for all LOLPOPs Holders</h3>
-        </Grid>
-      </Grid>
-      <Grid container spacing={1}>
-        <Grid item xs={6} md={1}>
-          <h3 className="SaleTarget">100%+</h3>
-        </Grid>
-        <Grid item xs={6} md={11}>
-          <h3>
-            PopKarts Release, Italy-Trip Giveaway, Seasons Revealed, Airdrop
-            Initiated
-          </h3>
-        </Grid>
-      </Grid>
+      <br />
+      <h3 className="SaleTarget">0%</h3>
+      <h3>LOLPOPs Released for Mint!</h3>
+      <br />
+      <h3 className="SaleTarget">10%</h3>
+      <h3>Buy food that is not Top Ramen</h3>
+      <br />
+      <h3 className="SaleTarget">25%</h3>
+      <h3>POPSQUAD goes looking for New Driver-Teams (Collabs)</h3>
+      <br />
+      <h3 className="SaleTarget">40%</h3>
+      <h3>Layer 2 for PopKarts Revealed</h3>
+      <br />
+      <h3 className="SaleTarget">50%</h3>
+      <h3>Post-Mintout Charity Revealed</h3>
+      <br />
+      <h3 className="SaleTarget">65%</h3>
+      <h3>Merch-Shop Developed and Special Merch Giveaways</h3>
+      <br />
+      <h3 className="SaleTarget">80%</h3>
+      <h3>ETH Giveways</h3>
+      <br />
+      <h3 className="SaleTarget">90%</h3>
+      <h3>Airdrop Reveal for all LOLPOPs Holders</h3>
+      <br />
+      <h3 className="SaleTarget">100%+</h3>
+      <h3>
+        PopKarts Release, Italy-Trip Giveaway, Seasons Revealed, Airdrop
+        Initiated
+      </h3>
+
       <br />
       <hr className="Divider" id="Team" />
       <br />
       <h2 className="SectionTitle">THE TEAM</h2>
+      <h3>
+        LOLPOPs was created to bring community together through our love of
+        gaming, and allow players to earn value for their participation.
+      </h3>
+      <br />
+      <h3>CryptoPaco</h3>
+      <h4>Founder and 3D Technical Developer</h4>
+      <br />
+      <h3>Pancake</h3>
+      <h4>Founder and Visual Artist</h4>
+      <br />
+      <h3>Yz</h3>
+      <h4>Project Manager</h4>
+      <br />
+      <h3>Technologist</h3>
+      <h4>Web/Solidity Engineer</h4>
+      <br />
       <Grid container spacing={2}>
         <Grid item xs={6} md={6}>
-          <h3>
-            LOLPOPs was created to bring community together through our love of
-            gaming, and allow players to earn value for their participation.
-          </h3>
-          <h3>CryptoPaco: Founder and 3D Technical Developer</h3>
-          <h3>Pancake: Founder and Visual Artist</h3>
-          <h3>Yz: Project Manager</h3>
-          <h3>Tech: Developer</h3>
-        </Grid>
-        <Grid item xs={6} md={1} />
-        <Grid item xs={6} md={5}>
           <div className="TeamImageContainer">
             <img src="teampop1.png" alt="nft" className="TeamImage"></img>
             <img src="teampop2.png" alt="nft" className="TeamImage"></img>
           </div>
+        </Grid>
+        <Grid item xs={6} md={6}>
           <div className="TeamImageContainer">
             <img src="teampop3.png" alt="nft" className="TeamImage"></img>
             <img src="teampop4.png" alt="nft" className="TeamImage"></img>
@@ -345,7 +309,7 @@ const Minter = (props) => {
   );
 };
 
-export default Minter;
+export default MobileMinter;
 
 const ImageContainer = styled("div")({
   display: "flex",
@@ -356,8 +320,8 @@ const ImageContainer = styled("div")({
 });
 
 const MinterImage = styled("img")({
-  width: "240px",
-  height: "240px",
+  width: "300px",
+  height: "300px",
   borderRadius: "5%",
   border: "2px solid #242424",
 });
