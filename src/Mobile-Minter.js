@@ -118,10 +118,10 @@ const MobileMinter = (props) => {
         ></img>
       </div>
       {/* <p id="status">{status}</p> */}
-      <h2>
+      <h3>
         LOLPOPs is a collection of 10,000 randomly-generated photorealistic NFTs
         living on the Ethereum Blockchain.
-      </h2>
+      </h3>
       <ImageContainer>
         <MinterImage src="lolpop3.png" alt="nft"></MinterImage>
       </ImageContainer>
