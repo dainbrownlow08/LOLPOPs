@@ -1,3 +1,4 @@
+import React, { Component } from "react";
 import "./App.css";
 import Minter from "./Minter";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
@@ -13,14 +14,18 @@ const theme = createTheme({
   },
 });
 
-function App() {
-  return (
-    <ThemeProvider theme={theme}>
-      <div className="App">
-        <Minter></Minter>
-      </div>
-    </ThemeProvider>
-  );
+export default class App extends Component {
+  render() {
+    let width = window.innerWidth;
+    console.log(width);
+    if (width > 695) {
+      return (
+        <ThemeProvider theme={theme}>
+          <Minter></Minter>
+        </ThemeProvider>
+      );
+    } else {
+      return <div>HELLO</div>;
+    }
+  }
 }
-
-export default App;
