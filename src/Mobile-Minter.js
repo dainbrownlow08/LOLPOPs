@@ -229,18 +229,14 @@ const MobileMinter = (props) => {
       <h3>Technologist</h3>
       <h4>Web/Solidity Engineer</h4>
       <br />
-      <Grid container spacing={2}>
-        <Grid item xs={6} md={6}>
-          <div className="TeamImageContainer">
-            <img src="teampop1.png" alt="nft" className="TeamImage"></img>
-            <img src="teampop2.png" alt="nft" className="TeamImage"></img>
-          </div>
+      <Grid container spacing={1}>
+        <Grid item xs={12} md={12}>
+          <img src="teampop1.png" alt="nft" className="TeamImage"></img>
+          <img src="teampop2.png" alt="nft" className="TeamImage"></img>
         </Grid>
-        <Grid item xs={6} md={6}>
-          <div className="TeamImageContainer">
-            <img src="teampop3.png" alt="nft" className="TeamImage"></img>
-            <img src="teampop4.png" alt="nft" className="TeamImage"></img>
-          </div>
+        <Grid item xs={12} md={12}>
+          <img src="teampop3.png" alt="nft" className="TeamImage"></img>
+          <img src="teampop4.png" alt="nft" className="TeamImage"></img>
         </Grid>
       </Grid>
       <br />
