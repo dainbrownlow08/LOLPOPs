@@ -7,8 +7,6 @@ import Grid from "@mui/material/Grid";
 import SvgIcon from "@mui/material/SvgIcon";
 import { IconButton } from "@mui/material";
 
-import Toolbar from "@mui/material/Toolbar";
-
 const Minter = (props) => {
   //State variables
   const [walletAddress, setWallet] = useState("");
