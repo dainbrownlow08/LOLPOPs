@@ -57,6 +57,17 @@ code {
   font-size: 30px;
 }
 
+.Navbar {
+  flex-grow: 1;
+  justify-content: left;
+}
+
+.Socialbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 input {
   border-top-style: hidden;
   border-right-style: hidden;
@@ -105,12 +116,12 @@ button {
   padding: 32px 60px;
 }
 
-#walletButton {
+/* #walletButton {
   text-align: right;
   float: right;
   margin-bottom: 50px;
   line-height: 16px;
-}
+} */
 
 #mintButton {
   margin-top: 40px;
