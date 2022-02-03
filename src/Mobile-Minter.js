@@ -269,7 +269,7 @@ const MobileMinter = (props) => {
       <h3>Technologist</h3>
       <h3>Web/Solidity Engineer</h3>
       <br />
-      <Grid container spacing={1}>
+      <Grid container spacing={0}>
         <Grid item xs={12} md={12}>
           <img src="teampop1.png" alt="nft" className="TeamImage"></img>
           <img src="teampop2.png" alt="nft" className="TeamImage"></img>
