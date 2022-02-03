@@ -75,40 +75,43 @@ const Minter = (props) => {
 
   return (
     <div className="Minter">
-      <Toolbar>
-        <div className="Navbar">
-          <a href="#FAQ">
-            <Button>FAQ</Button>
-          </a>
-          <a href="#Roadmap">
-            <Button>ROADMAP</Button>
-          </a>
-          <a href="#Team">
-            <Button>TEAM</Button>
-          </a>
-          <a href="#Artists">
-            <Button>ARTISTS</Button>
-          </a>
-          <a href="#Popkarts">
-            <Button>POPKARTS</Button>
-          </a>
-        </div>
-        <Button
-          id="walletButton"
-          variant="outlined"
-          onClick={connectWalletPressed}
-        >
-          {walletAddress.length > 0 ? (
-            "Connected: " +
-            String(walletAddress).substring(0, 6) +
-            "..." +
-            String(walletAddress).substring(38)
-          ) : (
-            <span>Connect Wallet</span>
-          )}
-        </Button>
-      </Toolbar>
+      <Button
+        id="walletButton"
+        variant="outlined"
+        onClick={connectWalletPressed}
+      >
+        {walletAddress.length > 0 ? (
+          "Connected: " +
+          String(walletAddress).substring(0, 6) +
+          "..." +
+          String(walletAddress).substring(38)
+        ) : (
+          <span>Connect Wallet</span>
+        )}
+      </Button>
       <br />
+      <br />
+      <a className="nav-item" href="#FAQ">
+        FAQ
+      </a>
+      <a className="nav-item" href="#Roadmap">
+        ROADMAP
+      </a>
+      <a className="nav-item" href="#Team">
+        TEAM
+      </a>
+      <a className="nav-item" href="#Artists">
+        ARTISTS
+      </a>
+      <a className="nav-item" href="#Popkarts">
+        POPKARTS
+      </a>
+
+      {/* <a href="#FAQ">FAQ</a>
+        <a href="#Roadmap">ROADMAP</a>
+        <a href="#Team">TEAM</a>
+        <a href="#Artists">ARTISTS</a>
+        <a href="#Popkarts">POPKARTS</a> */}
       <h1 id="title">LOLPOPs NFT</h1>
       {/* <p id="status">{status}</p> */}
       <h2>

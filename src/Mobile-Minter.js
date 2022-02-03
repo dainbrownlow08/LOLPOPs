@@ -117,6 +117,21 @@ const MobileMinter = (props) => {
           alt="nft"
         ></img>
       </div>
+      <a className="nav-item" href="#FAQ">
+        FAQ
+      </a>
+      <a className="nav-item" href="#Roadmap">
+        ROADMAP
+      </a>
+      <a className="nav-item" href="#Team">
+        TEAM
+      </a>
+      <a className="nav-item" href="#Artists">
+        ARTISTS
+      </a>
+      <a className="nav-item" href="#Popkarts">
+        POPKARTS
+      </a>
       {/* <p id="status">{status}</p> */}
       <h3>
         LOLPOPs is a collection of 10,000 randomly-generated photorealistic NFTs
