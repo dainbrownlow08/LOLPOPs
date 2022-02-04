@@ -48,6 +48,10 @@ code {
   align-items: center;
 }
 
+.nav-item {
+  margin-right: 12px;
+}
+
 .ConnectContainer {
   display: flex;
   justify-content: right;

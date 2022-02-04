@@ -75,29 +75,19 @@ const Minter = (props) => {
     <div>
       <div className="SiteContainer">
         <Button>
-          <a className="nav-item" href="#FAQ">
-            FAQ
-          </a>
+          <a href="#FAQ">FAQ</a>
         </Button>
         <Button>
-          <a className="nav-item" href="#Roadmap">
-            ROADMAP
-          </a>
+          <a href="#Roadmap">ROADMAP</a>
         </Button>
         <Button>
-          <a className="nav-item" href="#Team">
-            TEAM
-          </a>
+          <a href="#Team">TEAM</a>
         </Button>
         <Button>
-          <a className="nav-item" href="#Artists">
-            ARTISTS
-          </a>
+          <a href="#Artists">ARTISTS</a>
         </Button>
         <Button>
-          <a className="nav-item" href="#Popkarts">
-            POPKARTS
-          </a>
+          <a href="#Popkarts">POPKARTS</a>
         </Button>
         <IconButton href="https://twitter.com/lolpopsnft">
           <SvgIcon color="primary">
