@@ -123,11 +123,10 @@ const Minter = (props) => {
           LOLPOPs is a collection of 8,888 randomly-generated photorealistic
           NFTs living on the Ethereum Blockchain.
         </h2>
-        <ImageContainer>
-          <MinterImage src="lolpop1.png" alt="nft"></MinterImage>
-          <MinterImage src="lolpop2.png" alt="nft"></MinterImage>
-          <MinterImage src="lolpop3.png" alt="nft"></MinterImage>
-        </ImageContainer>
+
+        <MinterImage src="lolpop1.png" alt="nft"></MinterImage>
+        <MinterImage src="lolpop2.png" alt="nft"></MinterImage>
+        <MinterImage src="lolpop3.png" alt="nft"></MinterImage>
         {/* <form>
         <input
           type="text"
@@ -150,7 +149,6 @@ const Minter = (props) => {
         {/* <button id="mintButton" onClick={onMintPressed}>
         Mint NFT
       </button> */}
-
         <h3>
           We set out to make an NFT collection created with an innovative
           process, and share our artistic ability and experience in design. In
@@ -169,6 +167,7 @@ const Minter = (props) => {
         <hr className="Divider" id="FAQ" />
         <br />
         <h2 className="SectionTitle">FAQ</h2>
+        <br />
         <h2>HOW CAN WE MINT?</h2>
         <h3>
           On Minting-Day, head to our website confirm your mint window! We are
@@ -177,10 +176,13 @@ const Minter = (props) => {
           verified - we are looking into potential solutions, and will be sure
           to update everyone soon on how we'll handle our mint-reservations!
         </h3>
+        <br />
         <h2>HOW MUCH TO MINT A LOLPOP?</h2>
         <h3>0.08 ETH</h3>
+        <br />
         <h2>HOW MANY LOLPOPS CAN WE MINT?</h2>
         <h3>Maximum of 10 per Transaction</h3>
+        <br />
         <h2>WHEN WILL LOLPOPS REVEAL?</h2>
         <h3>Right After Mint!</h3>
         <br />
@@ -349,17 +351,9 @@ const Minter = (props) => {
 
 export default Minter;
 
-const ImageContainer = styled("div")({
-  display: "flex",
-  flexWrap: "wrap",
-  justifyContent: "space-evenly",
-  rowGap: "10px",
-  columnGap: "10px",
-});
-
 const MinterImage = styled("img")({
   width: "240px",
   height: "240px",
   borderRadius: "5%",
-  border: "2px solid #242424",
+  border: "4px solid #121212",
 });
