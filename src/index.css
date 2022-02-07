@@ -41,6 +41,16 @@ code {
   text-align: left;
 }
 
+.Logo {
+  height: 75px;
+  width: 328px;
+}
+
+.LogoMobile {
+  height: 48px;
+  width: 210px;
+}
+
 .Pizzaz {
   margin-top: 15px;
   display: flex;
@@ -129,25 +139,9 @@ input:focus {
   border-color: rgba(4, 4, 5, 0.4);
 }
 
-/* button {
-  padding: 9px 16px;
-  max-height: 40px;
-  border-color: #254cdd;
-  color: #254cdd;
-  background-color: transparent;
-  border-radius: 8px;
-  align-items: center;
-  font-size: 16px;
-  font-weight: 500;
-  text-align: center;
-  font-weight: bold;
-  cursor: pointer;
-} */
-
 #title {
   font-family: "Luckiest Guy", cursive;
   font-size: 65px;
-  /* margin-bottom: 40px; */
 }
 
 .MobileTitle {
@@ -170,13 +164,6 @@ input:focus {
   text-align: center;
   padding: 32px 60px;
 }
-
-/* #walletButton {
-  text-align: right;
-  float: right;
-  margin-bottom: 50px;
-  line-height: 16px;
-} */
 
 #mintButton {
   margin-top: 40px;

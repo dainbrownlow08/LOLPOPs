@@ -5,112 +5,15 @@ import SvgIcon from "@mui/material/SvgIcon";
 import { IconButton } from "@mui/material";
 
 const MobileMinter = (props) => {
-  //State variables
-  // const [walletAddress, setWallet] = useState("");
-  // const [status, setStatus] = useState("");
-  // const [name, setName] = useState("");
-  // const [description, setDescription] = useState("");
-  // const [url, setURL] = useState("");
-
-  // function addWalletListener() {
-  //   if (window.ethereum) {
-  //     window.ethereum.on("accountsChanged", (accounts) => {
-  //       if (accounts.length > 0) {
-  //         setWallet(accounts[0]);
-  //         setStatus("👆🏽 Write a message in the text-field above.");
-  //       } else {
-  //         setWallet("");
-  //         setStatus("🦊 Connect to Metamask using the top right button.");
-  //       }
-  //     });
-  //   } else {
-  //     console.log(status);
-  //     setStatus(
-  //       <p>
-  //         {" "}
-  //         🦊{" "}
-  //         <a
-  //           target="_blank"
-  //           rel="noreferrer"
-  //           href={`https://metamask.io/download.html`}
-  //         >
-  //           You must install Metamask, a virtual Ethereum wallet, in your
-  //           browser.
-  //         </a>
-  //       </p>
-  //     );
-  //   }
-  // }
-
-  // async function getStatus() {
-  //   const { address, status } = await getCurrentWalletConnected();
-  //   setWallet(address);
-  //   setStatus(status);
-
-  //   addWalletListener();
-  // }
-
-  // useEffect(() => {
-  //   getStatus();
-  // }, []);
-
-  // const connectWalletPressed = async () => {
-  //   const walletResponse = await connectWallet();
-  //   setStatus(walletResponse.status);
-  //   setWallet(walletResponse.address);
-  // };
-
-  // const disconnectWalletPressed = async () => {
-  //   setWallet("");
-  // };
-
-  // const onMintPressed = async () => {
-  //   //TODO: implement
-  // };
-
   return (
     <div className="MobileMinter">
-      {/* <Toolbar>
-        <div className="Navbar">
-          <a href="#FAQ">
-            <Button>FAQ</Button>
-          </a>
-          <a href="#Roadmap">
-            <Button>ROADMAP</Button>
-          </a>
-          <a href="#Team">
-            <Button>TEAM</Button>
-          </a>
-          <a href="#Artists">
-            <Button>ARTISTS</Button>
-          </a>
-          <a href="#Popkarts">
-            <Button>POPKARTS</Button>
-          </a>
-        </div>
-        <Button
-          id="walletButton"
-          variant="outlined"
-          onClick={connectWalletPressed}
-        >
-          {walletAddress.length > 0 ? (
-            "Connected: " +
-            String(walletAddress).substring(0, 6) +
-            "..." +
-            String(walletAddress).substring(38)
-          ) : (
-            <span>Connect Wallet</span>
-          )}
-        </Button>
-      </Toolbar>
-      <br /> */}
       <div className="Pizzaz">
         <img
           src="lolpop-mobile-banner6.png"
           className="MobileBannerImage"
           alt="nft"
         ></img>
-        <h1 className="MobileTitle">LOLPOPs NFT</h1>
+        <img className="LogoMobile" alt="nft " src="logo2.png"></img>
         <img
           src="lolpop-mobile-banner1.png"
           className="MobileBannerImage"
@@ -145,7 +48,6 @@ const MobileMinter = (props) => {
         </IconButton>
       </div>
       <br />
-      {/* <p id="status">{status}</p> */}
       <h3>
         LOLPOPs is a collection of 8,888 randomly-generated photorealistic NFTs
         living on the Ethereum Blockchain.
@@ -153,28 +55,6 @@ const MobileMinter = (props) => {
       <ImageContainer>
         <MinterImage src="lolpop3.png" alt="nft"></MinterImage>
       </ImageContainer>
-      {/* <form>
-        <input
-          type="text"
-          placeholder="e.g. https://gateway.pinata.cloud/ipfs/<hash>"
-          onChange={(event) => setURL(event.target.value)}
-        />
-        <h2>🤔 Name: </h2>
-        <input
-          type="text"
-          placeholder="e.g. My first NFT!"
-          onChange={(event) => setName(event.target.value)}
-        />
-        <h2>✍️ Description: </h2>
-        <input
-          type="text"
-          placeholder="e.g. Even cooler than cryptokitties ;)"
-          onChange={(event) => setDescription(event.target.value)}
-        />
-      </form> */}
-      {/* <button id="mintButton" onClick={onMintPressed}>
-        Mint NFT
-      </button> */}
       <br />
       <h3>
         We set out to make an NFT collection created with an innovative process,

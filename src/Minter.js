@@ -118,7 +118,7 @@ const Minter = (props) => {
         )}
       </div>
       <div className="Minter">
-        <h1 id="title">LOLPOPs NFT</h1>
+        <img className="Logo" alt="nft " src="logo2.png"></img>
         <h2>
           LOLPOPs is a collection of 8,888 randomly-generated photorealistic
           NFTs living on the Ethereum Blockchain.
