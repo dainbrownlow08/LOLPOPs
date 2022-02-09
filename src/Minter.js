@@ -123,10 +123,11 @@ const Minter = (props) => {
           LOLPOPs is a collection of 8,888 randomly-generated photorealistic
           NFTs living on the Ethereum Blockchain.
         </h2>
-
-        <MinterImage src="lolpop1.png" alt="nft"></MinterImage>
-        <MinterImage src="lolpop2.png" alt="nft"></MinterImage>
-        <MinterImage src="lolpop3.png" alt="nft"></MinterImage>
+        <div className="Hero">
+          <MinterImage src="lolpop1.png" alt="nft"></MinterImage>
+          <MinterImage src="lolpop2.png" alt="nft"></MinterImage>
+          <MinterImage src="lolpop3.png" alt="nft"></MinterImage>
+        </div>
         {/* <form>
         <input
           type="text"
@@ -170,11 +171,14 @@ const Minter = (props) => {
         <br />
         <h2>HOW CAN WE MINT?</h2>
         <h3>
-          On Minting-Day, head to our website confirm your mint window! We are
-          finalizing systems to ensure we avoid "Gas Wars" by allowing users
-          extended periods of time to mint after their wallet address is
-          verified - we are looking into potential solutions, and will be sure
-          to update everyone soon on how we'll handle our mint-reservations!
+          On Minting-Day, head to our website (you're here!) to mint your
+          LOLPOPs! We are finalizing system scheduling to ensure we avoid "Gas
+          Wars" by allowing users extended periods of time to mint after their
+          wallet address is verified/connected for Whitelist and Public Mint
+          alike - we will gather addresses for Golden Tickets and Whitelist in
+          the two weeks prior to Minting and add them to our Contracts for
+          access, and reveal the precise Mint Schedule as we get nearer to Mint
+          Day, currently 3/4!
         </h3>
         <br />
         <h2>HOW MUCH TO MINT A LOLPOP?</h2>
@@ -283,7 +287,8 @@ const Minter = (props) => {
             <h3>CryptoPaco: Founder and 3D Technical Developer</h3>
             <h3>Pancake: Founder and Visual Artist</h3>
             <h3>Yz: Project Manager</h3>
-            <h3>Tech: Web/Solidity Engineer</h3>
+            <h3>Tech: Web Developer</h3>
+            <h3>Valed: Solidity Developer</h3>
           </Grid>
           <Grid item xs={6} md={1} />
           <Grid item xs={6} md={5}>
@@ -341,6 +346,12 @@ const Minter = (props) => {
           solutions and interoperability for POPKARTS. The game will be
           web-hosted for all to play! Your LOLPOP NFT will be your ticket into
           POPKARTS!
+        </h3>
+        <h3>
+          Our goal is to create and integrate a Play-to-Earn (P2E) Structure
+          within the POPKARTS world; racing to earn! This will be completed with
+          $POPTOKEN (POPT) when we are able to come to completion on Game
+          Development and start rolling out new features down the line.
         </h3>
         <br />
         <br />

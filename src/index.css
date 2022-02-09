@@ -93,6 +93,12 @@ code {
   border: 1px solid #242424;
 }
 
+.Hero {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
 .TeamImage {
   margin-top: 0px;
   margin-left: 0px;

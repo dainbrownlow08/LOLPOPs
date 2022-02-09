@@ -76,11 +76,13 @@ const MobileMinter = (props) => {
       <h2 className="SectionTitle">FAQ</h2>
       <h2>HOW CAN WE MINT?</h2>
       <h3>
-        On Minting-Day, head to our website to confirm your mint window! We are
-        finalizing systems to ensure we avoid "Gas Wars" by allowing users
-        extended periods of time to mint after their wallet address is verified
-        - we are looking into potential solutions, and will be sure to update
-        everyone soon on how we'll handle our mint-reservations!
+        On Minting-Day, head to our website (you're here!) to mint your LOLPOPs!
+        We are finalizing system scheduling to ensure we avoid "Gas Wars" by
+        allowing users extended periods of time to mint after their wallet
+        address is verified/connected for Whitelist and Public Mint alike - we
+        will gather addresses for Golden Tickets and Whitelist in the two weeks
+        prior to Minting and add them to our Contracts for access, and reveal
+        the precise Mint Schedule as we get nearer to Mint Day, currently 3/4!
       </h3>
       <h2>HOW MUCH TO MINT A LOLPOP?</h2>
       <h3>0.08 ETH</h3>
@@ -147,7 +149,10 @@ const MobileMinter = (props) => {
       <h3>Project Manager</h3>
       <br />
       <h3>Technologist</h3>
-      <h3>Web/Solidity Engineer</h3>
+      <h3>Web Developer</h3>
+      <br />
+      <h3>Valed</h3>
+      <h3>Solidity Developer</h3>
       <br />
       <Grid container spacing={0}>
         <Grid item xs={12} md={12}>
@@ -201,6 +206,12 @@ const MobileMinter = (props) => {
         environment, characters, in-game systems, hosting solutions and
         interoperability for POPKARTS. The game will be web-hosted for all to
         play! Your LOLPOP NFT will be your ticket into POPKARTS!
+      </h3>
+      <h3>
+        Our goal is to create and integrate a Play-to-Earn (P2E) Structure
+        within the POPKARTS world; racing to earn! This will be completed with
+        $POPTOKEN (POPT) when we are able to come to completion on Game
+        Development and start rolling out new features down the line.{" "}
       </h3>
       <br />
     </div>
