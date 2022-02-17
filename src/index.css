@@ -27,7 +27,7 @@ code {
 }
 
 .Minter {
-  max-width: 100vh;
+  max-width: 120vh;
   max-height: 80vh;
   padding: 0px 100px;
   margin: 0 auto;
@@ -42,8 +42,36 @@ code {
 }
 
 .Logo {
-  height: 75px;
-  width: 328px;
+  height: 90px;
+  width: 400px;
+}
+
+.LogoContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.Toolbar {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  margin-top: 0;
+  margin-right: 100px;
+  margin-left: 25px;
+  margin-bottom: 0;
+  background-color: #121212;
+  /* max-width: 140vh; */
+  /* marginTop: "10px",
+  marginBottom: "10px",
+  marginRight: "105px",
+  position: "sticky", */
+}
+
+.NavContainer {
+  display: flex;
+  justify-content: center;
 }
 
 .LogoMobile {
@@ -93,10 +121,18 @@ code {
   border: 1px solid #242424;
 }
 
-.Hero {
+/* .Hero {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
+} */
+
+.Banner {
+  margin-top: 80px;
+  height: auto;
+  width: 100%;
+  max-width: 1300px;
+  max-height: 712px;
 }
 
 .TeamImage {
@@ -127,6 +163,24 @@ code {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+.AccordionTitle {
+  background-color: #121212;
+  color: #bb86fc;
+}
+
+.AccordionTab {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.BannerText {
+  max-width: 120vh;
+  max-height: 80vh;
+  /* padding: 0px 100px; */
+  margin: 0 auto;
+  text-align: center;
 }
 
 input {
@@ -175,4 +229,80 @@ input:focus {
   margin-top: 40px;
   background-color: #254cdd;
   color: white;
+}
+
+div.slide-up {
+  margin-top: 40px;
+  height: 120px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+div.slide-up h2 {
+  animation: 2s slide-up;
+  margin-top: 0%;
+}
+
+@keyframes slide-up {
+  from {
+    margin-top: 100%;
+    height: 300%;
+  }
+
+  to {
+    margin-top: 0%;
+    height: 100%;
+  }
+}
+
+.fade-in {
+  animation: fadeIn ease 2.5s;
+  -webkit-animation: fadeIn ease 2.5s;
+  -moz-animation: fadeIn ease 2.5s;
+  -o-animation: fadeIn ease 2.5s;
+  -ms-animation: fadeIn ease 2.5s;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

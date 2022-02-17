@@ -1,11 +1,14 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from "react";
 import { connectWallet, getCurrentWalletConnected } from "./utils/interact.js";
-import styled from "styled-components";
 import Button from "@mui/material/Button";
 import Grid from "@mui/material/Grid";
 import SvgIcon from "@mui/material/SvgIcon";
-import { IconButton } from "@mui/material";
+import { IconButton, Toolbar, Box } from "@mui/material";
+import Accordion from "@mui/material/Accordion";
+import MuiAccordionSummary from "@mui/material/AccordionSummary";
+import AccordionDetails from "@mui/material/AccordionDetails";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 const Minter = (props) => {
   //State variables
@@ -73,61 +76,122 @@ const Minter = (props) => {
 
   return (
     <div>
-      <div className="SiteContainer">
-        <Button>
-          <a href="#FAQ">FAQ</a>
-        </Button>
-        <Button>
-          <a href="#Roadmap">ROADMAP</a>
-        </Button>
-        <Button>
-          <a href="#Team">TEAM</a>
-        </Button>
-        <Button>
-          <a href="#Artists">ARTISTS</a>
-        </Button>
-        <Button>
-          <a href="#Popkarts">POPKARTS</a>
-        </Button>
-        <IconButton href="https://twitter.com/lolpopsnft">
-          <SvgIcon color="primary">
-            <path d="M21.634,4.031c-0.815,0.385-2.202,1.107-2.899,1.245c-0.027,0.007-0.049,0.016-0.075,0.023 c-0.813-0.802-1.927-1.299-3.16-1.299c-2.485,0-4.5,2.015-4.5,4.5c0,0.131-0.011,0.372,0,0.5c-3.218,0-5.568-1.679-7.327-3.837 C3.438,4.873,3.188,5.024,3.136,5.23C3.019,5.696,2.979,6.475,2.979,7.031c0,1.401,1.095,2.777,2.8,3.63 c-0.314,0.081-0.66,0.139-1.02,0.139c-0.424,0-0.912-0.111-1.339-0.335c-0.158-0.083-0.499-0.06-0.398,0.344 c0.405,1.619,2.253,2.756,3.904,3.087c-0.375,0.221-1.175,0.176-1.543,0.176c-0.136,0-0.609-0.032-0.915-0.07 c-0.279-0.034-0.708,0.038-0.349,0.582c0.771,1.167,2.515,1.9,4.016,1.928c-1.382,1.084-3.642,1.48-5.807,1.48 c-0.438-0.01-0.416,0.489-0.063,0.674C3.862,19.504,6.478,20,8.347,20C15.777,20,20,14.337,20,8.999 c0-0.086-0.002-0.266-0.005-0.447C19.995,8.534,20,8.517,20,8.499c0-0.027-0.008-0.053-0.008-0.08 c-0.003-0.136-0.006-0.263-0.009-0.329c0.589-0.425,1.491-1.163,1.947-1.728c0.155-0.192,0.03-0.425-0.181-0.352 c-0.543,0.189-1.482,0.555-2.07,0.625c1.177-0.779,1.759-1.457,2.259-2.21C22.109,4.168,21.895,3.907,21.634,4.031z"></path>
-          </SvgIcon>
-        </IconButton>
-        <IconButton href="https://discord.gg/eF6Ewk6ysQ">
-          <SvgIcon color="primary">
-            <path d="M18.942 5.556a16.299 16.299 0 0 0-4.126-1.297c-.178.321-.385.754-.529 1.097a15.175 15.175 0 0 0-4.573 0 11.583 11.583 0 0 0-.535-1.097 16.274 16.274 0 0 0-4.129 1.3c-2.611 3.946-3.319 7.794-2.965 11.587a16.494 16.494 0 0 0 5.061 2.593 12.65 12.65 0 0 0 1.084-1.785 10.689 10.689 0 0 1-1.707-.831c.143-.106.283-.217.418-.331 3.291 1.539 6.866 1.539 10.118 0 .137.114.277.225.418.331-.541.326-1.114.606-1.71.832a12.52 12.52 0 0 0 1.084 1.785 16.46 16.46 0 0 0 5.064-2.595c.415-4.396-.709-8.209-2.973-11.589zM8.678 14.813c-.988 0-1.798-.922-1.798-2.045s.793-2.047 1.798-2.047 1.815.922 1.798 2.047c.001 1.123-.793 2.045-1.798 2.045zm6.644 0c-.988 0-1.798-.922-1.798-2.045s.793-2.047 1.798-2.047 1.815.922 1.798 2.047c0 1.123-.793 2.045-1.798 2.045z" />
-          </SvgIcon>
-        </IconButton>
-        {walletAddress.length > 0 ? (
-          <Button
-            id="walletButton"
-            variant="text"
-            onClick={disconnectWalletPressed}
-          >
-            <span>Disconnect Wallet</span>
-          </Button>
-        ) : (
-          <Button
-            id="walletButton"
-            variant="text"
-            onClick={connectWalletPressed}
-          >
-            <span>Connect Wallet</span>
-          </Button>
-        )}
+      <div className="Toolbar">
+        <Toolbar className="Toolbar">
+          <img alt="lolpops-nft" src="logo2.png" width={185} height={44} />
+          <Box>
+            {" "}
+            <Button>
+              <a href="#FAQ">FAQ</a>
+            </Button>
+            <Button>
+              <a href="#Roadmap">ROADMAP</a>
+            </Button>
+            <Button>
+              <a href="#Team">TEAM</a>
+            </Button>
+            <Button>
+              <a href="#Artists">ARTISTS</a>
+            </Button>
+            <Button>
+              <a href="#Popkarts">POPKARTS</a>
+            </Button>
+            <IconButton href="https://twitter.com/lolpopsnft">
+              <SvgIcon color="primary">
+                <path d="M21.634,4.031c-0.815,0.385-2.202,1.107-2.899,1.245c-0.027,0.007-0.049,0.016-0.075,0.023 c-0.813-0.802-1.927-1.299-3.16-1.299c-2.485,0-4.5,2.015-4.5,4.5c0,0.131-0.011,0.372,0,0.5c-3.218,0-5.568-1.679-7.327-3.837 C3.438,4.873,3.188,5.024,3.136,5.23C3.019,5.696,2.979,6.475,2.979,7.031c0,1.401,1.095,2.777,2.8,3.63 c-0.314,0.081-0.66,0.139-1.02,0.139c-0.424,0-0.912-0.111-1.339-0.335c-0.158-0.083-0.499-0.06-0.398,0.344 c0.405,1.619,2.253,2.756,3.904,3.087c-0.375,0.221-1.175,0.176-1.543,0.176c-0.136,0-0.609-0.032-0.915-0.07 c-0.279-0.034-0.708,0.038-0.349,0.582c0.771,1.167,2.515,1.9,4.016,1.928c-1.382,1.084-3.642,1.48-5.807,1.48 c-0.438-0.01-0.416,0.489-0.063,0.674C3.862,19.504,6.478,20,8.347,20C15.777,20,20,14.337,20,8.999 c0-0.086-0.002-0.266-0.005-0.447C19.995,8.534,20,8.517,20,8.499c0-0.027-0.008-0.053-0.008-0.08 c-0.003-0.136-0.006-0.263-0.009-0.329c0.589-0.425,1.491-1.163,1.947-1.728c0.155-0.192,0.03-0.425-0.181-0.352 c-0.543,0.189-1.482,0.555-2.07,0.625c1.177-0.779,1.759-1.457,2.259-2.21C22.109,4.168,21.895,3.907,21.634,4.031z"></path>
+              </SvgIcon>
+            </IconButton>
+            <IconButton href="https://discord.gg/eF6Ewk6ysQ">
+              <SvgIcon color="primary">
+                <path d="M18.942 5.556a16.299 16.299 0 0 0-4.126-1.297c-.178.321-.385.754-.529 1.097a15.175 15.175 0 0 0-4.573 0 11.583 11.583 0 0 0-.535-1.097 16.274 16.274 0 0 0-4.129 1.3c-2.611 3.946-3.319 7.794-2.965 11.587a16.494 16.494 0 0 0 5.061 2.593 12.65 12.65 0 0 0 1.084-1.785 10.689 10.689 0 0 1-1.707-.831c.143-.106.283-.217.418-.331 3.291 1.539 6.866 1.539 10.118 0 .137.114.277.225.418.331-.541.326-1.114.606-1.71.832a12.52 12.52 0 0 0 1.084 1.785 16.46 16.46 0 0 0 5.064-2.595c.415-4.396-.709-8.209-2.973-11.589zM8.678 14.813c-.988 0-1.798-.922-1.798-2.045s.793-2.047 1.798-2.047 1.815.922 1.798 2.047c.001 1.123-.793 2.045-1.798 2.045zm6.644 0c-.988 0-1.798-.922-1.798-2.045s.793-2.047 1.798-2.047 1.815.922 1.798 2.047c0 1.123-.793 2.045-1.798 2.045z" />
+              </SvgIcon>
+            </IconButton>
+            {walletAddress.length > 0 ? (
+              <Button
+                id="walletButton"
+                variant="text"
+                onClick={disconnectWalletPressed}
+              >
+                <span>Disconnect Wallet</span>
+              </Button>
+            ) : (
+              <Button
+                id="walletButton"
+                variant="text"
+                onClick={connectWalletPressed}
+              >
+                <span>Connect Wallet</span>
+              </Button>
+            )}
+          </Box>
+        </Toolbar>
+      </div>
+      <div className="LogoContainer">
+        <div class="fade-in">
+          <img className="Banner" src="pop_hero.png" alt="nft"></img>
+        </div>
+      </div>
+      <div class="slide-up">
+        <div className="BannerText">
+          <h2>
+            LOLPOPs is a collection of 10,000 randomly-generated photorealistic
+            NFTs living on the Ethereum Blockchain.
+          </h2>
+        </div>
       </div>
       <div className="Minter">
-        <img className="Logo" alt="nft " src="logo2.png"></img>
-        <h2>
-          LOLPOPs is a collection of 8,888 randomly-generated photorealistic
-          NFTs living on the Ethereum Blockchain.
-        </h2>
-        <div className="Hero">
-          <MinterImage src="lolpop1.png" alt="nft"></MinterImage>
-          <MinterImage src="lolpop2.png" alt="nft"></MinterImage>
-          <MinterImage src="lolpop3.png" alt="nft"></MinterImage>
-        </div>
+        {/* <div className="NavContainer">
+          <Button>
+            <a href="#FAQ">FAQ</a>
+          </Button>
+          <Button>
+            <a href="#Roadmap">ROADMAP</a>
+          </Button>
+          <Button>
+            <a href="#Team">TEAM</a>
+          </Button>
+          <Button>
+            <a href="#Artists">ARTISTS</a>
+          </Button>
+          <Button>
+            <a href="#Popkarts">POPKARTS</a>
+          </Button>
+          <IconButton href="https://twitter.com/lolpopsnft">
+            <SvgIcon color="primary">
+              <path d="M21.634,4.031c-0.815,0.385-2.202,1.107-2.899,1.245c-0.027,0.007-0.049,0.016-0.075,0.023 c-0.813-0.802-1.927-1.299-3.16-1.299c-2.485,0-4.5,2.015-4.5,4.5c0,0.131-0.011,0.372,0,0.5c-3.218,0-5.568-1.679-7.327-3.837 C3.438,4.873,3.188,5.024,3.136,5.23C3.019,5.696,2.979,6.475,2.979,7.031c0,1.401,1.095,2.777,2.8,3.63 c-0.314,0.081-0.66,0.139-1.02,0.139c-0.424,0-0.912-0.111-1.339-0.335c-0.158-0.083-0.499-0.06-0.398,0.344 c0.405,1.619,2.253,2.756,3.904,3.087c-0.375,0.221-1.175,0.176-1.543,0.176c-0.136,0-0.609-0.032-0.915-0.07 c-0.279-0.034-0.708,0.038-0.349,0.582c0.771,1.167,2.515,1.9,4.016,1.928c-1.382,1.084-3.642,1.48-5.807,1.48 c-0.438-0.01-0.416,0.489-0.063,0.674C3.862,19.504,6.478,20,8.347,20C15.777,20,20,14.337,20,8.999 c0-0.086-0.002-0.266-0.005-0.447C19.995,8.534,20,8.517,20,8.499c0-0.027-0.008-0.053-0.008-0.08 c-0.003-0.136-0.006-0.263-0.009-0.329c0.589-0.425,1.491-1.163,1.947-1.728c0.155-0.192,0.03-0.425-0.181-0.352 c-0.543,0.189-1.482,0.555-2.07,0.625c1.177-0.779,1.759-1.457,2.259-2.21C22.109,4.168,21.895,3.907,21.634,4.031z"></path>
+            </SvgIcon>
+          </IconButton>
+          <IconButton href="https://discord.gg/eF6Ewk6ysQ">
+            <SvgIcon color="primary">
+              <path d="M18.942 5.556a16.299 16.299 0 0 0-4.126-1.297c-.178.321-.385.754-.529 1.097a15.175 15.175 0 0 0-4.573 0 11.583 11.583 0 0 0-.535-1.097 16.274 16.274 0 0 0-4.129 1.3c-2.611 3.946-3.319 7.794-2.965 11.587a16.494 16.494 0 0 0 5.061 2.593 12.65 12.65 0 0 0 1.084-1.785 10.689 10.689 0 0 1-1.707-.831c.143-.106.283-.217.418-.331 3.291 1.539 6.866 1.539 10.118 0 .137.114.277.225.418.331-.541.326-1.114.606-1.71.832a12.52 12.52 0 0 0 1.084 1.785 16.46 16.46 0 0 0 5.064-2.595c.415-4.396-.709-8.209-2.973-11.589zM8.678 14.813c-.988 0-1.798-.922-1.798-2.045s.793-2.047 1.798-2.047 1.815.922 1.798 2.047c.001 1.123-.793 2.045-1.798 2.045zm6.644 0c-.988 0-1.798-.922-1.798-2.045s.793-2.047 1.798-2.047 1.815.922 1.798 2.047c0 1.123-.793 2.045-1.798 2.045z" />
+            </SvgIcon>
+          </IconButton>
+          {walletAddress.length > 0 ? (
+            <Button
+              id="walletButton"
+              variant="text"
+              onClick={disconnectWalletPressed}
+            >
+              <span>Disconnect Wallet</span>
+            </Button>
+          ) : (
+            <Button
+              id="walletButton"
+              variant="text"
+              onClick={connectWalletPressed}
+            >
+              <span>Connect Wallet</span>
+            </Button>
+          )}
+        </div> */}
+        {/* <div className="LogoContainer">
+          <img className="Logo" alt="nft " src="logo2.png"></img>
+        </div> */}
+        {/* <div className="Hero">
+        <MinterImage src="lolpop1.png" alt="nft"></MinterImage>
+        <MinterImage src="lolpop2.png" alt="nft"></MinterImage>
+        <MinterImage src="lolpop3.png" alt="nft"></MinterImage>
+      </div> */}
         {/* <form>
         <input
           type="text"
@@ -150,45 +214,13 @@ const Minter = (props) => {
         {/* <button id="mintButton" onClick={onMintPressed}>
         Mint NFT
       </button> */}
-        <h3>
+        {/* <h3>
           We set out to make an NFT collection created with an innovative
-          process, and share our artistic ability and experience in design. In
-          our search for the best way to accomplish this, we have chosen to use
-          a renowned digital tool used specifically in the VFX field: SideFX
-          Houdini. Using Procedural Dependency Graph (PDG), we utilized
-          procedural architecture designed to distribute tasks and manage
-          dependencies to better scale, automate, and analyze content pipelines.
-        </h3>
-        <h3>
+          process, and share our artistic ability and experience in design.
           LOLPOPs are not just another pfp project, they are your playable
           characters in POPKARTS, a P2E web3 racing game being developed in
           Unreal Engine.
-        </h3>
-        <br />
-        <hr className="Divider" id="FAQ" />
-        <br />
-        <h2 className="SectionTitle">FAQ</h2>
-        <br />
-        <h2>HOW CAN WE MINT?</h2>
-        <h3>
-          On Minting-Day, head to our website (you're here!) to mint your
-          LOLPOPs! We are finalizing system scheduling to ensure we avoid "Gas
-          Wars" by allowing users extended periods of time to mint after their
-          wallet address is verified/connected for Whitelist and Public Mint
-          alike - we will gather addresses for Golden Tickets and Whitelist in
-          the two weeks prior to Minting and add them to our Contracts for
-          access, and reveal the precise Mint Schedule as we get nearer to Mint
-          Day, currently 3/4!
-        </h3>
-        <br />
-        <h2>HOW MUCH TO MINT A LOLPOP?</h2>
-        <h3>0.08 ETH</h3>
-        <br />
-        <h2>HOW MANY LOLPOPS CAN WE MINT?</h2>
-        <h3>Maximum of 10 per Transaction</h3>
-        <br />
-        <h2>WHEN WILL LOLPOPS REVEAL?</h2>
-        <h3>Right After Mint!</h3>
+        </h3> */}
         <br />
         <hr className="Divider" id="Roadmap" />
         <br />
@@ -354,6 +386,104 @@ const Minter = (props) => {
           Development and start rolling out new features down the line.
         </h3>
         <br />
+        <br id="FAQ" />
+        <hr className="Divider" />
+        <br />
+        <h2 className="SectionTitle">FAQ</h2>
+
+        <div>
+          <Accordion className="AccordionBorder">
+            <div className="AccordionTitle">
+              <MuiAccordionSummary
+                expandIcon={<ExpandMoreIcon sx={{ color: "white" }} />}
+                aria-controls="panel2a-content"
+                id="panel2a-header"
+              >
+                <h2>WHAT IS AN NFT?</h2>
+              </MuiAccordionSummary>
+            </div>
+            <AccordionDetails className="AccordionTab">
+              <h3>
+                A non-fungible token is a non-interchangeable unit of data
+                stored on a blockchain, a form of digital ledger, that can be
+                sold and traded. Types of NFT data units may be associated with
+                digital files such as photos, videos, and audio.
+              </h3>
+            </AccordionDetails>
+          </Accordion>
+          <Accordion className="AccordionBorder">
+            <div className="AccordionTitle">
+              <MuiAccordionSummary
+                expandIcon={<ExpandMoreIcon sx={{ color: "white" }} />}
+                aria-controls="panel2a-content"
+                id="panel2a-header"
+              >
+                <h2>WHAT IS METAMASK?</h2>
+              </MuiAccordionSummary>
+            </div>
+            <AccordionDetails className="AccordionTab">
+              <h3>
+                MetaMask is a software cryptocurrency wallet used to interact
+                with the Ethereum blockchain. It allows users to access their
+                Ethereum wallet through a browser extension or mobile app, which
+                can then be used to interact with decentralized applications.
+              </h3>
+            </AccordionDetails>
+          </Accordion>
+          <Accordion>
+            <div className="AccordionTitle">
+              <MuiAccordionSummary
+                expandIcon={<ExpandMoreIcon sx={{ color: "white" }} />}
+                aria-controls="panel1a-content"
+                id="panel1a-header"
+              >
+                <h2>HOW DO I MINT?</h2>
+              </MuiAccordionSummary>
+            </div>
+            <AccordionDetails className="AccordionTab">
+              <h3>
+                On Minting-Day, head to our website (you're here!) to mint your
+                LOLPOPs using your MetaMask! We are finalizing system scheduling
+                to ensure we avoid "Gas Wars" by allowing users extended periods
+                of time to mint after their wallet address is verified/connected
+                for Whitelist and Public Mint alike - we will gather addresses
+                for Golden Tickets and Whitelist in the two weeks prior to
+                Minting and add them to our Contracts for access, and reveal the
+                precise Mint Schedule as we get nearer to Mint Day, currently
+                3/4!
+              </h3>
+            </AccordionDetails>
+          </Accordion>
+          <Accordion className="AccordionBorder">
+            <div className="AccordionTitle">
+              <MuiAccordionSummary
+                expandIcon={<ExpandMoreIcon sx={{ color: "white" }} />}
+                aria-controls="panel2a-content"
+                id="panel2a-header"
+              >
+                <h2>HOW MUCH DOES IT COST TO MINT A LOLPOP?</h2>
+              </MuiAccordionSummary>
+            </div>
+            <AccordionDetails className="AccordionTab">
+              <h3>0.08 ETH</h3>
+            </AccordionDetails>
+          </Accordion>
+          <Accordion className="AccordionBorder">
+            <div className="AccordionTitle">
+              <MuiAccordionSummary
+                expandIcon={<ExpandMoreIcon sx={{ color: "white" }} />}
+                aria-controls="panel2a-content"
+                id="panel2a-header"
+              >
+                <h2>WHEN WILL LOLPOPS REVEAL?</h2>
+              </MuiAccordionSummary>
+            </div>
+            <AccordionDetails className="AccordionTab">
+              <h3>Right After Mint!</h3>
+            </AccordionDetails>
+          </Accordion>
+        </div>
+        <br />
         <br />
       </div>
     </div>
@@ -361,10 +491,3 @@ const Minter = (props) => {
 };
 
 export default Minter;
-
-const MinterImage = styled("img")({
-  width: "240px",
-  height: "240px",
-  borderRadius: "5%",
-  border: "4px solid #121212",
-});
