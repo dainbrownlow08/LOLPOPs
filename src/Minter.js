@@ -78,11 +78,10 @@ const Minter = (props) => {
     <div>
       <div className="Toolbar">
         <Toolbar className="Toolbar">
-          <img alt="lolpops-nft" src="logo2.png" width={185} height={44} />
+          <img alt="lolpops-nft" src="logo2.png" className="WebLogo" />
           <Box>
-            {" "}
             <Button>
-              <a href="#FAQ">FAQ</a>
+              <a href="#About">ABOUT</a>
             </Button>
             <Button>
               <a href="#Roadmap">ROADMAP</a>
@@ -95,6 +94,9 @@ const Minter = (props) => {
             </Button>
             <Button>
               <a href="#Popkarts">POPKARTS</a>
+            </Button>
+            <Button>
+              <a href="#FAQ">FAQ</a>
             </Button>
             <IconButton href="https://twitter.com/lolpopsnft">
               <SvgIcon color="primary">
@@ -133,7 +135,7 @@ const Minter = (props) => {
       </div>
       <div class="slide-up">
         <div className="BannerText">
-          <h2>
+          <h2 id="About">
             LOLPOPs is a collection of 10,000 randomly-generated photorealistic
             NFTs living on the Ethereum Blockchain.
           </h2>
@@ -222,7 +224,27 @@ const Minter = (props) => {
           Unreal Engine.
         </h3> */}
         <br />
-        <hr className="Divider" id="Roadmap" />
+        <h2 className="SectionTitle">ABOUT</h2>
+        <h3>
+          We set out to make an NFT collection created with an innovative
+          process, to share our artistic ability and experience in design, and
+          create a community where we can appreciate the sweeter things in the
+          metaverse. LOLPOPs are more than PFPs - they’re your ticket into the
+          upcoming POPVERSE. In our search for the best way to accomplish these
+          goals, we have chosen to use a renowned tool in VFX, SideFX Houdini,
+          to create pops. We used a process called Procedural Dependency Graph
+          (PDG). PDG is a procedural architecture designed to distribute tasks
+          and manage dependencies to scale, automate, and analyze content
+          pipelines for Film, TV, Games, Advertising and VR. PDG is also able to
+          automate, iterate, and vary, which is how we get our randomization.
+          The "wedging workflow" utilized in PDG lets you create multiple
+          iterations of a design. We first create the main subject-character, in
+          all it’s aspects, then move on and create a set of accessories and
+          items. Once done it's all done, we automate creation of combinations
+          and render the final LOLPOPs for all to see!
+        </h3>
+        <br id="Roadmap" />
+        <hr className="Divider" />
         <br />
         <h2 className="SectionTitle">ROADMAP ACTIVATIONS</h2>
         <h3>
@@ -305,8 +327,8 @@ const Minter = (props) => {
             </h3>
           </Grid>
         </Grid>
-        <br />
-        <hr className="Divider" id="Team" />
+        <br id="Team" />
+        <hr className="Divider" />
         <br />
         <h2 className="SectionTitle">THE TEAM</h2>
         <Grid container spacing={2}>
@@ -316,8 +338,8 @@ const Minter = (props) => {
               of gaming, and allow players to earn value for their
               participation.
             </h3>
-            <h3>CryptoPaco: Founder and 3D Technical Developer</h3>
-            <h3>Pancake: Founder and Visual Artist</h3>
+            <h3>Clat (Pancake): Co-Founder and Visual Artist</h3>
+            <h3>CryptoPaco: Co-Founder and 3D Technical Developer</h3>
             <h3>Yz: Project Manager</h3>
             <h3>Tech: Web Developer</h3>
             <h3>Valed: Solidity Developer</h3>
@@ -335,13 +357,21 @@ const Minter = (props) => {
           </Grid>
         </Grid>
         <br />
-        <br />
-        <hr className="Divider" id="Artists" />
+        <br id="Artists" />
+        <hr className="Divider" />
         <br />
         <h2 className="SectionTitle">MORE ABOUT OUR ARTISTS</h2>
+        <h2>Clat (Pancake)</h2>
+        <h3>
+          Co-Founder and Visual Artist of LOLPOPs, I’ve been working as a
+          Digital Artist in the advertising industry since 2013 for a variety of
+          clients, such as Youtube, WWF, Skoda, Dazn, Barilla, Discovery, and
+          many more! I was published in 200 Best Digital Artists Worldwide
+          2021/2022 by Lürzer's Archive.
+        </h3>
         <h2>CryptoPaco</h2>
         <h3>
-          Founder and 3D Technical Developer of LOLPOPs I've been working for
+          Co-Founder and 3D Technical Developer of LOLPOPs I've been working for
           almost 29 years in the visual effects field and contributing to
           develop FX and pipelines for known shows such as Watchmen, Captain
           Marvel, Geostorm, Thor: Ragnarok, King Arthur: Legend of the Sword,
@@ -355,16 +385,8 @@ const Minter = (props) => {
           rigid body dynamics, particles systems, fluid dynamics, explosions,
           dust, debris, and tearing metals.
         </h3>
-        <h2>Pancake</h2>
-        <h3>
-          Founder and Visual Artist of LOLPOPs, I’ve been working as a Digital
-          Artist in the advertising industry since 2013 for a variety of
-          clients, such as Youtube, WWF, Skoda, Dazn, Barilla, Discovery, and
-          many more! I was published in 200 Best Digital Artists Worldwide
-          2021/2022 by Lürzer's Archive.
-        </h3>
-        <br />
-        <hr className="Divider" id="Popkarts" />
+        <br id="Popkarts" />
+        <hr className="Divider" />
         <br />
         <h2 className="SectionTitle">POPKARTS</h2>
         <h3>

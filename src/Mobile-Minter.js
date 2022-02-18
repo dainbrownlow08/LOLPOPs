@@ -8,20 +8,10 @@ const MobileMinter = (props) => {
   return (
     <div className="MobileMinter">
       <div className="Pizzaz">
-        <img
-          src="lolpop-mobile-banner6.png"
-          className="MobileBannerImage"
-          alt="nft"
-        ></img>
         <img className="LogoMobile" alt="nft " src="logo2.png"></img>
-        <img
-          src="lolpop-mobile-banner1.png"
-          className="MobileBannerImage"
-          alt="nft"
-        ></img>
       </div>
-      <a className="nav-item" href="#FAQ">
-        FAQ
+      <a className="nav-item" href="#About">
+        ABOUT
       </a>
       <a className="nav-item" href="#Roadmap">
         ROADMAP
@@ -34,6 +24,9 @@ const MobileMinter = (props) => {
       </a>
       <a className="nav-item" href="#Popkarts">
         POPKARTS
+      </a>
+      <a className="nav-item" href="#FAQ">
+        FAQ
       </a>
       <div className="Socialbar">
         <IconButton href="https://twitter.com/lolpopsnft">
@@ -48,48 +41,33 @@ const MobileMinter = (props) => {
         </IconButton>
       </div>
       <br />
+      <ImageContainer>
+        <MinterImage src="pop_hero.png" alt="nft"></MinterImage>
+      </ImageContainer>
       <h3>
-        LOLPOPs is a collection of 8,888 randomly-generated photorealistic NFTs
+        LOLPOPs is a collection of 10,000 randomly-generated photorealistic NFTs
         living on the Ethereum Blockchain.
       </h3>
-      <ImageContainer>
-        <MinterImage src="lolpop3.png" alt="nft"></MinterImage>
-      </ImageContainer>
-      <br />
+      <br id="About" />
+      <h2 className="SectionTitle">ABOUT</h2>
       <h3>
         We set out to make an NFT collection created with an innovative process,
-        and share our artistic ability and experience in design. In our search
-        for the best way to accomplish this, we have chosen to use a renowned
-        digital tool used specifically in the VFX field: SideFX Houdini. Using
-        Procedural Dependency Graph (PDG), we utilized procedural architecture
-        designed to distribute tasks and manage dependencies to better scale,
-        automate, and analyze content pipelines.
+        to share our artistic ability and experience in design, and create a
+        community where we can appreciate the sweeter things in the metaverse.
+        LOLPOPs are more than PFPs - they’re your ticket into the upcoming
+        POPVERSE. In our search for the best way to accomplish these goals, we
+        have chosen to use a renowned tool in VFX, SideFX Houdini, to create
+        pops. We used a process called Procedural Dependency Graph (PDG). PDG is
+        a procedural architecture designed to distribute tasks and manage
+        dependencies to scale, automate, and analyze content pipelines for Film,
+        TV, Games, Advertising and VR. PDG is also able to automate, iterate,
+        and vary, which is how we get our randomization. The "wedging workflow"
+        utilized in PDG lets you create multiple iterations of a design. We
+        first create the main subject-character, in all it’s aspects, then move
+        on and create a set of accessories and items. Once done it's all done,
+        we automate creation of combinations and render the final LOLPOPs for
+        all to see!
       </h3>
-      <h3>
-        LOLPOPs are not just another pfp project, they are your playable
-        characters in POPKARTS, a P2E web3 racing game being developed in Unreal
-        Engine.
-      </h3>
-      <br />
-      <hr className="Divider" id="FAQ" />
-      <br />
-      <h2 className="SectionTitle">FAQ</h2>
-      <h2>HOW CAN WE MINT?</h2>
-      <h3>
-        On Minting-Day, head to our website (you're here!) to mint your LOLPOPs!
-        We are finalizing system scheduling to ensure we avoid "Gas Wars" by
-        allowing users extended periods of time to mint after their wallet
-        address is verified/connected for Whitelist and Public Mint alike - we
-        will gather addresses for Golden Tickets and Whitelist in the two weeks
-        prior to Minting and add them to our Contracts for access, and reveal
-        the precise Mint Schedule as we get nearer to Mint Day, currently 3/4!
-      </h3>
-      <h2>HOW MUCH TO MINT A LOLPOP?</h2>
-      <h3>0.08 ETH</h3>
-      <h2>HOW MANY LOLPOPS CAN WE MINT?</h2>
-      <h3>Maximum of 10 per Transaction</h3>
-      <h2>WHEN WILL LOLPOPS REVEAL?</h2>
-      <h3>Right After Mint!</h3>
       <br />
       <hr className="Divider" id="Roadmap" />
       <br />
@@ -139,11 +117,11 @@ const MobileMinter = (props) => {
         gaming, and allow players to earn value for their participation.
       </h3>
       <br />
+      <h3>Clat (Pancake)</h3>
+      <h3>Founder and Visual Artist</h3>
+      <br />
       <h3>CryptoPaco</h3>
       <h3>Founder and 3D Technical Developer</h3>
-      <br />
-      <h3>Pancake</h3>
-      <h3>Founder and Visual Artist</h3>
       <br />
       <h3>Yz</h3>
       <h3>Project Manager</h3>
@@ -169,9 +147,17 @@ const MobileMinter = (props) => {
       <hr className="Divider" id="Artists" />
       <br />
       <h2 className="SectionTitle">MORE ABOUT OUR ARTISTS</h2>
+      <h2>Clat (Pancake)</h2>
+      <h3>
+        Co-Founder and Visual Artist of LOLPOPs, I’ve been working as a Digital
+        Artist in the advertising industry since 2013 for a variety of clients,
+        such as Youtube, WWF, Skoda, Dazn, Barilla, Discovery, and many more! I
+        was published in 200 Best Digital Artists Worldwide 2021/2022 by
+        Lürzer's Archive.
+      </h3>
       <h2>CryptoPaco</h2>
       <h3>
-        Founder and 3D Technical Developer of LOLPOPs I've been working for
+        Co-Founder and 3D Technical Developer of LOLPOPs I've been working for
         almost 29 years in the visual effects field and contributing to develop
         FX and pipelines for known shows such as Watchmen, Captain Marvel,
         Geostorm, Thor: Ragnarok, King Arthur: Legend of the Sword, Doctor
@@ -183,14 +169,6 @@ const MobileMinter = (props) => {
         solutions. For many years my role has been Effects Technical Director,
         specifically managing and simulating rigid body dynamics, particles
         systems, fluid dynamics, explosions, dust, debris, and tearing metals.
-      </h3>
-      <h2>Pancake</h2>
-      <h3>
-        Founder and Visual Artist of LOLPOPs, I’ve been working as a Digital
-        Artist in the advertising industry since 2013 for a variety of clients,
-        such as Youtube, WWF, Skoda, Dazn, Barilla, Discovery, and many more! I
-        was published in 200 Best Digital Artists Worldwide 2021/2022 by
-        Lürzer's Archive.
       </h3>
       <br />
       <hr className="Divider" id="Popkarts" />
@@ -214,6 +192,40 @@ const MobileMinter = (props) => {
         Development and start rolling out new features down the line.{" "}
       </h3>
       <br />
+      <hr className="Divider" id="FAQ" />
+      <br />
+      <h2 className="SectionTitle">FAQ</h2>
+      <h2>WHAT IS AN NFT?</h2>
+      <h3>
+        A non-fungible token is a non-interchangeable unit of data stored on a
+        blockchain, a form of digital ledger, that can be sold and traded. Types
+        of NFT data units may be associated with digital files such as photos,
+        videos, and audio.
+      </h3>
+      <h2>WHAT IS METAMASK?</h2>
+      <h3>
+        MetaMask is a software cryptocurrency wallet used to interact with the
+        Ethereum blockchain. It allows users to access their Ethereum wallet
+        through a browser extension or mobile app, which can then be used to
+        interact with decentralized applications.
+      </h3>
+      <h2>HOW CAN WE MINT?</h2>
+      <h3>
+        On Minting-Day, head to our website (you're here!) to mint your LOLPOPs!
+        We are finalizing system scheduling to ensure we avoid "Gas Wars" by
+        allowing users extended periods of time to mint after their wallet
+        address is verified/connected for Whitelist and Public Mint alike - we
+        will gather addresses for Golden Tickets and Whitelist in the two weeks
+        prior to Minting and add them to our Contracts for access, and reveal
+        the precise Mint Schedule as we get nearer to Mint Day, currently 3/4!
+      </h3>
+      <h2>HOW MUCH TO MINT A LOLPOP?</h2>
+      <h3>0.08 ETH</h3>
+      <h2>HOW MANY LOLPOPS CAN WE MINT?</h2>
+      <h3>Maximum of 10 per Transaction</h3>
+      <h2>WHEN WILL LOLPOPS REVEAL?</h2>
+      <h3>Right After Mint!</h3>
+      <br />
     </div>
   );
 };
@@ -229,8 +241,6 @@ const ImageContainer = styled("div")({
 });
 
 const MinterImage = styled("img")({
-  width: "300px",
-  height: "300px",
-  borderRadius: "5%",
-  border: "2px solid #242424",
+  width: "490px",
+  height: "223px",
 });
