@@ -9,7 +9,7 @@ import Accordion from "@mui/material/Accordion";
 import MuiAccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import Countdown from "react-countdown";
+// import Countdown from "react-countdown";
 
 const Minter = (props) => {
   //State variables
@@ -133,12 +133,12 @@ const Minter = (props) => {
         <div class="fade-in">
           <img className="Banner" src="pop_hero.png" alt="nft"></img>
         </div>
-        <div className="TimerContainer">
+        {/* <div className="TimerContainer">
           <Countdown
             className="Timer"
             date={"2022-03-04UTC017:00:00"}
           ></Countdown>
-        </div>
+        </div> */}
       </div>
       <div class="slide-up">
         <div className="BannerText">
