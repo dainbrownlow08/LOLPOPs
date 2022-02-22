@@ -49,6 +49,7 @@ code {
 .LogoContainer {
   display: flex;
   justify-content: center;
+  position: relative;
 }
 
 .Toolbar {
@@ -62,6 +63,7 @@ code {
   margin-left: 25px;
   margin-bottom: 0;
   background-color: #121212;
+  z-index: 3;
   /* max-width: 140vh; */
   /* marginTop: "10px",
   marginBottom: "10px",
@@ -72,6 +74,22 @@ code {
 .NavContainer {
   display: flex;
   justify-content: center;
+}
+
+.Timer {
+  color: #fcb2c0;
+  font-size: 4em;
+  font-weight: bolder;
+  text-shadow: 2px 2px #b43e5475;
+}
+
+.TimerContainer {
+  position: absolute;
+  margin-left: 23%;
+  margin-right: 35%;
+  margin-bottom: 35%;
+  margin-top: 40%;
+  width: 150px;
 }
 
 .WebLogo {
